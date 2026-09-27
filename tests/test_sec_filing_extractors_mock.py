@@ -16,14 +16,14 @@ from hashlib import sha256
 
 import pytest
 
-from sec_filing_extractors import (
+from extractors.sec_filing_extractors import (
     SECFilingExtractionError,
     SECFilingFormatError,
     _scan_raw_html,
     extract_sections,
 )
-from sec_filings import SECFilingDocument
-from sec_submissions import SECFiling
+from models.sec_filings import SECFilingDocument
+from client.sec_submissions import SECFiling
 
 
 # ---------------------------------------------------------------------------

@@ -16,12 +16,12 @@ so deterministic unit tests do not depend on external services.
 
 from __future__ import annotations
 
-from sec_client import SECClient
-from sec_filings import (
+from client.sec_client import SECClient
+from models.sec_filings import (
     SECFilingDocument,
     SECFilingsClient,
 )
-from sec_submissions import (
+from client.sec_submissions import (
     SECFiling,
     SubmissionsClient,
 )

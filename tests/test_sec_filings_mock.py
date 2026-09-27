@@ -20,18 +20,18 @@ from dataclasses import FrozenInstanceError
 
 import pytest
 
-from sec_client import (
+from client.sec_client import (
     SECClient,
     SECClientError,
     SECConfigurationError,
 )
-from sec_filings import (
+from models.sec_filings import (
     SECUnsupportedFilingError,
     SECFilingDataError,
     SECFilingDocument,
     SECFilingsClient,
 )
-from sec_submissions import SECFiling
+from client.sec_submissions import SECFiling
 
 
 SEC_NAME = "Schwab Market Data Pilot"

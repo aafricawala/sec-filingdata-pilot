@@ -15,14 +15,14 @@ These tests are intentionally separate from the offline mock tests.
 
 from __future__ import annotations
 
-from sec_client import SECClient
-from sec_filing_extractors import (
+from client.sec_client import SECClient
+from extractors.sec_filing_extractors import (
     _extract_heading_candidates_html,
     _taxonomy_key,
     extract_sections,
 )
-from sec_filings import SECFilingDocument, SECFilingsClient
-from sec_submissions import SECFiling, SubmissionsClient
+from models.sec_filings import SECFilingDocument, SECFilingsClient
+from client.sec_submissions import SECFiling, SubmissionsClient
 
 
 SEC_NAME = "Schwab Market Data Pilot"

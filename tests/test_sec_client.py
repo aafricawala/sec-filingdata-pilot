@@ -20,7 +20,7 @@ from unittest.mock import Mock
 import pytest
 import requests
 
-from sec_client import (
+from client.sec_client import (
     SECClient,
     SECConfigurationError,
     SECDataError,
@@ -670,12 +670,12 @@ def test_rate_limit_does_not_sleep_when_interval_has_elapsed(
     monotonic_values = iter([10.0, 10.0])
 
     monkeypatch.setattr(
-        "sec_client.time.monotonic",
+        "client.sec_client.time.monotonic",
         lambda: next(monotonic_values),
     )
 
     sleep_mock = Mock()
-    monkeypatch.setattr("sec_client.time.sleep", sleep_mock)
+    monkeypatch.setattr("client.sec_client.time.sleep", sleep_mock)
 
     client._last_request_time = 0.0
 
@@ -692,12 +692,12 @@ def test_rate_limit_sleeps_when_requests_are_too_close(
     monotonic_values = iter([0.0, 0.01])
 
     monkeypatch.setattr(
-        "sec_client.time.monotonic",
+        "client.sec_client.time.monotonic",
         lambda: next(monotonic_values),
     )
 
     sleep_mock = Mock()
-    monkeypatch.setattr("sec_client.time.sleep", sleep_mock)
+    monkeypatch.setattr("client.sec_client.time.sleep", sleep_mock)
 
     client._last_request_time = 0.0
 

@@ -6,8 +6,8 @@ from hashlib import sha256
 
 import pytest
 
-from sec_filings import SECFilingDocument
-from sec_ownership import (
+from models.sec_filings import SECFilingDocument
+from parsers.sec_ownership import (
     SECNonDerivativeOwnership,
     SECReportingPerson,
     SECDerivativeOwnership,
@@ -16,7 +16,7 @@ from sec_ownership import (
     SECOwnershipValidationError,
     parse_ownership_filing,
 )
-from sec_submissions import SECFiling
+from client.sec_submissions import SECFiling
 
 
 ACCESSION = "0001234567-26-000001"

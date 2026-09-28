@@ -16,7 +16,7 @@ from typing import Any, Dict
 import pandas as pd
 import pytest
 
-from sec_extractors import (
+from extractors.sec_extractors import (
     SECExtractorError,
     SECStructureError,
     SECTagNotFoundError,

@@ -16,8 +16,8 @@ from typing import Any, Dict
 import pandas as pd
 import pytest
 
-import sec_pipeline
-from sec_pipeline import SECPipelineError, extract_metrics_for_ticker
+import pipeline.sec_pipeline as sec_pipeline
+from pipeline.sec_pipeline import SECPipelineError, extract_metrics_for_ticker
 
 
 class DummySECClient:

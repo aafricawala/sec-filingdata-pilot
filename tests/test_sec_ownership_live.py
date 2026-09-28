@@ -6,13 +6,13 @@ from datetime import date
 
 import pytest
 
-from sec_client import SECClient
-from sec_filings import SECFilingDocument
-from sec_ownership import (
+from client.sec_client import SECClient
+from models.sec_filings import SECFilingDocument
+from parsers.sec_ownership import (
     SECOwnershipFiling,
     parse_ownership_filing,
 )
-from sec_submissions import SubmissionsClient
+from client.sec_submissions import SubmissionsClient
 
 
 SEC_TEST_EMAIL = os.getenv("SEC_TEST_EMAIL")

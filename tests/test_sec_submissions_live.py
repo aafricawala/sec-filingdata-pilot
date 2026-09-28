@@ -6,8 +6,8 @@ They validate that the production SECClient and SubmissionsClient work
 correctly against current SEC data.
 """
 
-from sec_client import SECClient
-from sec_submissions import SECFiling, SubmissionsClient
+from client.sec_client import SECClient
+from client.sec_submissions import SECFiling, SubmissionsClient
 
 
 # Use a real SEC identity for the integration test.
@@ -50,7 +50,7 @@ def test_msft_live_submissions() -> None:
     assert all(filing.form for filing in filings)
     assert all(filing.accession_number for filing in filings)
     assert all(filing.filing_date for filing in filings)
-    
+
     # Report dates are optional because SEC does not provide
     # reportDate for every filing type.
     assert all(
